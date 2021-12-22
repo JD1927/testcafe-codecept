@@ -18,3 +18,9 @@ Scenario('Extract Test', async ({ I }) => {
 	let value = await I.grabValueFrom('h1');
 	console.log(`Value: ${value}`);
 });
+
+Scenario('Page Object', async ({ I, LoginPage }) => {
+	LoginPage.goTo();
+	LoginPage.fillForm();
+	I.waitForText('Login and/or password are wrong.');
+});
