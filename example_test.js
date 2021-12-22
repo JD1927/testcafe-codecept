@@ -11,6 +11,7 @@ Feature('example');
 
 Scenario('Extract Test', async ({ I }) => {
 	I.amOnPage('http://www.example.com/');
+	I.refreshPage(); // Reload browser
 	let text = await I.grabTextFrom('h1');
 	console.log(`Text: ${text}`);
 	let value = await I.grabValueFrom('h1');
