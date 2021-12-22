@@ -10,6 +10,7 @@ Feature('example');
 // });
 
 Scenario('Extract Test', async ({ I }) => {
+	I.slowTest(0.2);
 	I.amOnPage('http://www.example.com/');
 	I.refreshPage(); // Reload browser
 	let text = await I.grabTextFrom('h1');

@@ -16,6 +16,9 @@ exports.config = {
 			keepCookies: true,
 			windowSize: '800x600',
 		},
+		CustomCommands: {
+			require: './customcommands_helper.js',
+		},
 	},
 	include: {
 		I: './steps_file.js',
